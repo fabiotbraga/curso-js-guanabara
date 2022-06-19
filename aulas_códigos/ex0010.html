@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Nacionalidade</title>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    Digite seu país: <input type="string" name="pais" id="nacionalidade">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resultado"></div>
+    <script>
+        function verificar() {
+            var txtnacionalidade = document.querySelector('input#nacionalidade')
+            var resultado = document.querySelector ('div#resultado')
+            var resulnacio = txtnacionalidade.value.toLowerCase()
+            resultado.innerHTML = `<p> Sua país natal é <strong>${txtnacionalidade.value}</strong></p>`
+            if (resulnacio == 'brasil') {
+                resultado.innerHTML += `<p>Você é brasileiro!<p>`
+            } else {
+                resultado.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+            resultado.innerHTML += `<p>Seja Bem-Vindo ao nosso País</p>`
+        }
+    </script>
+</body>
+</html>
